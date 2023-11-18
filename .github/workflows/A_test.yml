@@ -1,0 +1,38 @@
+name: A_testy
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch:
+
+jobs:
+  test_and_build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+
+    - name: Install dependencies
+      run: |
+        pip install PyQt5 pyinstaller pytest
+
+    - name: Run unit tests
+      run: pytest TESTY_Lista_2_43132.py
+
+    - name: Build exe
+      run: pyinstaller --onefile Lista_2_43132.py
+
+    - name: Test the application
+      run: |
+        # Add commands to test the application
+
+    # You can add more steps for additional tests or actions if needed
