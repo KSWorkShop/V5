@@ -21,9 +21,9 @@ jobs:
       with:
         python-version: 3.12.0
 
-    - name: Install PyQt5 pyinstaller pytest
+    - name: Install PyQt5 pyinstaller pytest psutil pytestqt
       run: |
-        pip install PyQt5 pyinstaller pytest psutil
+        pip install PyQt5 pyinstaller pytest psutil pytestqt
         
 #---------------------------------------------------------------------------
 
