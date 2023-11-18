@@ -28,7 +28,7 @@ jobs:
 #---------------------------------------------------------------------------
 
     - name: Run tests
-      run: pytest TESTY_Lista_2_43132.py
+      run: pytest TESTY_Lista_2_43132.py -v
 
-    - name: Build exe
-      run: pyinstaller --onefile Lista_2_43132.py
+ #   - name: Build exe
+ #     run: pyinstaller --onefile Lista_2_43132.py
