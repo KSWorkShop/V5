@@ -27,5 +27,8 @@ jobs:
         
 #---------------------------------------------------------------------------
 
-    - name: Run tests
+    - name: TESTY czy działa
       run: pytest TESTY_Lista_2_43132.py -v
+
+    - name: TESTY czy kolor jest dobry :P
+      run: pytest TESTY_Lista_2_43132_V2.py -v
