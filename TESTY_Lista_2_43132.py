@@ -1,6 +1,7 @@
 import pytest
 from PyQt5.QtCore import Qt
 from PyQt5.QtTest import QTest
+from pytestqt.qtbot import QtBot
 from Lista_2_43132 import MyTestApp
 
 @pytest.fixture
