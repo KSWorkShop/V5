@@ -24,6 +24,8 @@ jobs:
     - name: Install dependencies
       run: |
         pip install PyQt5 pyinstaller pytest
+        
+#---------------------------------------------------------------------------
 
     - name: Mój_exe
       run: pyinstaller --onefile Lista_2_43132.py
@@ -31,5 +33,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: your-app
+        name: Mój_exe
         path: dist/Lista_2_43132.exe
