@@ -1,4 +1,4 @@
-name: build
+name: A_build
 
 on:
   push:
@@ -16,14 +16,16 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Set up Python
+    - name: Python
       uses: actions/setup-python@v2
       with:
         python-version: 3.12.0
 
-    - name: Install dependencies
+    - name: Install PyQt5 pyinstaller pytest
       run: |
         pip install PyQt5 pyinstaller pytest
+        
+#---------------------------------------------------------------------------
 
     - name: Mój_exe
       run: pyinstaller --onefile Lista_2_43132.py
@@ -31,5 +33,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: your-app
+        name: Mój_exe
         path: dist/Lista_2_43132.exe
